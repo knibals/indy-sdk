@@ -1,6 +1,8 @@
 # Development
 FROM ubuntu:16.04
 
+ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
+
 # JRE installation and gcc
 RUN apt-get update -y && apt-get install -y \
     gcc \

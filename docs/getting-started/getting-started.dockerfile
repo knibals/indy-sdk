@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 
+ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 RUN useradd -ms /bin/bash indy
 
 # Install environment

@@ -1,6 +1,7 @@
 FROM ubuntu:16.04
 
 ARG uid=1000
+ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
 # Install environment
 RUN apt-get update -y && apt-get install -y \
