@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 RUN useradd -ms /bin/bash indy
@@ -25,7 +25,7 @@ RUN pip3 install -U \
 	python3-indy==1.11.0
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 \
-    && add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial stable" \
+    && add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable" \
     && apt-get update \
     && apt-get install -y \
     libindy=1.11.0

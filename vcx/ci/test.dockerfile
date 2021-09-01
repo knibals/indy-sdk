@@ -1,5 +1,5 @@
 # Development
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG uid=1000
 
@@ -40,7 +40,7 @@ RUN mkdir -p /libindy
 WORKDIR /libindy
 
 ENV LIBINDY_DEB=libindy_1.1.0_amd64.deb
-ENV LIBINDY_DOWNLOAD_URL=https://repo.sovrin.org/sdk/lib/apt/xenial/stable/$LIBINDY_DEB
+ENV LIBINDY_DOWNLOAD_URL=https://repo.sovrin.org/sdk/lib/apt/bionic/stable/$LIBINDY_DEB
 
 RUN curl -fsOSL $LIBINDY_DOWNLOAD_URL \
     && dpkg -i $LIBINDY_DEB \

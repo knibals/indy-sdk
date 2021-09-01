@@ -1,5 +1,5 @@
 # Development
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ARG APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=1
 
@@ -61,10 +61,10 @@ RUN /tmp/installCert.sh
 
 # Add sovrin to sources.list
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CE7709D068DB5E88 && \
-    add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial master" && \
-    add-apt-repository "deb https://repo.sovrin.org/sdk/deb xenial stable" && \
-    add-apt-repository 'deb https://repo.sovrin.org/deb xenial master' && \
-    add-apt-repository 'deb https://repo.sovrin.org/deb xenial stable' && \
+    add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic master" && \
+    add-apt-repository "deb https://repo.sovrin.org/sdk/deb bionic stable" && \
+    add-apt-repository 'deb https://repo.sovrin.org/deb bionic master' && \
+    add-apt-repository 'deb https://repo.sovrin.org/deb bionic stable' && \
     add-apt-repository 'deb https://repo.corp.evernym.com/deb evernym-agency-dev-ubuntu main' && \
     curl https://repo.corp.evernym.com/repo.corp.evenym.com-sig.key | apt-key add -
 
